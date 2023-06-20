@@ -10,10 +10,11 @@ class Click extends Phaser.Scene{
         this.w = this.game.config.width;
         this.h = this.game.config.height;
         this.cameras.main.setBackgroundColor('#ffb6c1');
-        let greeting = this.add.text(this.w/9.6, this.h/2, "Click if you like. I really hope it helps.\nYou're doing the best you can and that's all that matters.").setFontSize(45);
+        let greeting = this.add.text(this.w/9.9, this.h/2, "Click if you like. I really hope it helps.\nYou're doing the best you can and that's all that matters.").setFontSize(45).setTintFill('0x000000').setWordWrapWidth(1500);
         this.input.on('pointerdown', () =>{
-            greeting.text = msgs[Math.floor(Math.random() * msgs.length-1)];
+            greeting.text = msgs[Math.floor(Math.random() * (msgs.length-1))];
             greeting.x = this.w/3;
+            greeting.setFontSize(75).setWordWrapWidth(600);
         });
     }
 }
@@ -23,8 +24,8 @@ const game = new Phaser.Game({
     scale: {
         mode: Phaser.Scale.FIT,
         autoCenter: Phaser.Scale.CENTER_BOTH,
-        width: 1920,
-        height: 1080
+        width: window.innerWidth,
+        height: window.innerHeight
     },
     physics: {
         default: 'arcade',
