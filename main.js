@@ -14,7 +14,7 @@ class Click extends Phaser.Scene{
         this.input.on('pointerdown', () =>{
             greeting.text = msgs[Math.floor(Math.random() * (msgs.length))];
             greeting.x = this.w/6;
-            greeting.setFontSize(75).setWordWrapWidth(this.w/2);
+            greeting.setFontSize(75).setWordWrapWidth(window.innerWidth/3);
         });
     }
 }
