@@ -6,7 +6,7 @@ class Click extends Phaser.Scene{
     create(){
         const msgs = ["You're wonderful!", "You are loved!", "You still have time!", "You deserve to rest!", "You're more capable than you think!", "You are so, so strong!", "This will pass!", 
                         "You are worthy!", "You are never alone!", "You're priceless!", "You're a diamond in the rough!", "You will succeed!", 
-                        "Support is never that far away!", "You matter!"];
+                        "Support is never that far away!", "You matter!", "Hang in there!", "We want you around!", "Please keep going."];
         this.w = this.game.config.width;
         this.h = this.game.config.height;
         this.cameras.main.setBackgroundColor('#ffb6c1');
